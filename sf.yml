@@ -1,0 +1,5 @@
+- name: 安装软件
+  hosts: localhost
+
+  tasks:
+    - include: tasks/emacs.yml

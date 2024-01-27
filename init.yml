@@ -7,4 +7,3 @@
   tasks:
     - include: tasks/git.yml
     - include: tasks/ssh.yml
-    - include: tasks/emacs.yml

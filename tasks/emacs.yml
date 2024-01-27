@@ -1,10 +1,19 @@
+- name: 安装 GNU Emacs - 添加库
+  become: true
+  apt_repository:
+   repo: ppa:ubuntuhandbook1/emacs
+   state: present
+   update_cache: True
+
 - name: 安装 GNU Emacs
+  become: true
   apt:
     name: emacs
     state: present
+
 - name: 下载 Emacs 配置
   become_user: fdong
   git:
     repo: git@github.com:curelesss/.emacs.d.git
-    dest: ~/
+    dest: ~/.emacs.d
     accept_hostkey: yes
