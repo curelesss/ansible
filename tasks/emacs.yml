@@ -14,12 +14,6 @@
   apt:
     upgrade: yes
 
-- name: 安装 GNU Emacs <4> - 安装 Emacs
-  become: true
-  apt:
-    name: emacs
-    state: present
-
 - name: 下载 Emacs 配置
   become_user: fdong
   git:
