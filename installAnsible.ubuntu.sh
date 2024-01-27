@@ -1,5 +1,5 @@
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
-sudo cp sources.list.mirror /etc/apt/sources.list
+sudo cp sources.list.ubuntu /etc/apt/sources.list
 sudo apt update
 sudo apt upgrade -y
 sudo apt install software-properties-common -y
