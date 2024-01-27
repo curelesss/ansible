@@ -1,0 +1,5 @@
+- name: Main Playbook
+  hosts: localhost
+
+  tasks:
+    - include: tasks/source.yml
