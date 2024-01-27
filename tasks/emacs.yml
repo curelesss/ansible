@@ -9,7 +9,12 @@
   apt:
     update_cache: yes
 
-- name: 安装 GNU Emacs <3> - 安装 Emacs
+- name: 安装 GNU Emacs <3> - 更新系统
+  become: true
+  apt:
+    upgrade: yes
+
+- name: 安装 GNU Emacs <4> - 安装 Emacs
   become: true
   apt:
     name: emacs
