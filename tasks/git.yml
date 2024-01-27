@@ -1,0 +1,14 @@
+- name: Git 个人邮件
+  git_config:
+    name: user.email
+    scope: global
+    value: "felixdong423@gmail.com"
+  tags:
+  - git
+- name: Git 个人姓名
+  git_config:
+    name: user.name
+    scope: global
+    value: "felixdong"
+  tags:
+  - git

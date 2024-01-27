@@ -1,0 +1,20 @@
+- name: 确认是否已备份 Ubuntu 镜像文件 sources.list
+  stat:
+    path: /etc/apt/sources.list.backup
+  register: sources_backup_check
+  when: ansible_distribution == "Ubuntu"
+
+- name: 备份 Ubuntu 镜像文件 sources.list
+  ansible.builtin.command:
+    cmd: cp /etc/apt/sources.list /etc/apt/sources.list.backup
+  when:
+    - ansible_distribution == "Ubuntu"
+    - not sources_backup_check.stat.exists
+  tags: update_source
+
+- name: 替换 Ubuntu 镜像文件 sources.list 为 清华源
+  ansible.builtin.copy:
+    src: sources.list.mirror
+    dest: /etc/apt/sources.list
+  when: ansible_distribution == "Ubuntu"
+  tags: update_source
