@@ -1,0 +1,10 @@
+- name: 安装 GNU Emacs
+  apt:
+    name: emacs
+    state: present
+- name: 下载 Emacs 配置
+  become_user: fdong
+  git:
+    repo: git@github.com:curelesss/.emacs.d.git
+    dest: ~/
+    accept_hostkey: yes
