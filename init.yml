@@ -5,5 +5,5 @@
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
 
   tasks:
-    - include: tasks/git.yml
-    - include: tasks/ssh.yml
+    - include_tasks: tasks/git.yml
+    - include_tasks: tasks/ssh.yml
