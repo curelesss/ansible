@@ -1,0 +1,16 @@
+- name: Arch Software Install Playbook
+  hosts: localhost
+  become: yes
+
+  handlers:
+    - name: Run locale-gen
+      command: locale-gen
+    - name: Refresh Pacman
+      command: pacman -Sy
+
+  tasks:
+    - include_tasks: arch/locale.gen.yml
+    - include_tasks: arch/note-fonts.yml
+    - include_tasks: arch/fdong.group.yml
+    - include_tasks: arch/pacman.conf.yml
+    - include_tasks: arch/aur_builder.yml

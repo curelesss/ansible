@@ -1,0 +1,24 @@
+- name: Update package cache
+  pacman:
+    update_cache: yes
+
+- name: Install Noto Fonts
+  pacman:
+    name: noto-fonts
+    state: present
+
+- name: Install Noto CJK Fonts
+  pacman:
+    name: noto-fonts-cjk
+    state: present
+
+- name: Install Noto Emoji Fonts
+  pacman:
+    name: noto-fonts-emoji
+    state: present
+
+- name: Install Noto Extra Fonts
+  pacman:
+    name: noto-fonts-extra
+    state: present
+

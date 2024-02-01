@@ -1,0 +1,7 @@
+- name: Update locale.gen
+  lineinfile:
+    path: /etc/locale.gen
+    regexp: '^#zh_CN.UTF-8 UTF-8'
+    line: 'zh_CN.UTF-8 UTF-8'
+  notify: Run locale-gen
+

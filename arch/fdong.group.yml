@@ -1,0 +1,78 @@
+- name: Add user to sys group
+  user:
+    name: fdong
+    groups: sys
+    append: yes
+
+- name: Add user to adm group
+  user:
+    name: fdong
+    groups: adm
+    append: yes
+
+- name: Add user to network group
+  user:
+    name: fdong
+    groups: network
+    append: yes
+
+- name: Add user to scanner group
+  user:
+    name: fdong
+    groups: scanner
+    append: yes
+
+- name: Add user to power group
+  user:
+    name: fdong
+    groups: power
+    append: yes
+
+- name: Add user to uucp group
+  user:
+    name: fdong
+    groups: uucp
+    append: yes
+
+- name: Add user to audio group
+  user:
+    name: fdong
+    groups: audio
+    append: yes
+
+- name: Add user to lp group
+  user:
+    name: fdong
+    groups: lp
+    append: yes
+
+- name: Add user to rfkill group
+  user:
+    name: fdong
+    groups: rfkill
+    append: yes
+
+- name: Add user to video group
+  user:
+    name: fdong
+    groups: video
+    append: yes
+
+- name: Add user to storage group
+  user:
+    name: fdong
+    groups: storage
+    append: yes
+
+- name: Add user to optical group
+  user:
+    name: fdong
+    groups: optical
+    append: yes
+
+- name: Add user to users group
+  user:
+    name: fdong
+    groups: users
+    append: yes
+
