@@ -1,0 +1,22 @@
+- name: Modify pacman.conf on Arch Linux
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Update pacman.conf - Color
+      lineinfile:
+        path: /etc/pacman.conf
+        regexp: '^#Color'
+        line: 'Color'
+      notify: Refresh Pacman
+
+    - name: Update pacman.conf - ParallelDownload
+      lineinfile:
+        path: /etc/pacman.conf
+        regexp: '^#ParallelDownloads = 5'
+        line: 'ParallelDownloads = 10'
+      notify: Refresh Pacman
+
+  handlers:
+    - name: Refresh Pacman
+      command: pacman -Sy
+

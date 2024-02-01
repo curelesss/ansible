@@ -1,0 +1,53 @@
+- name: Modify pacman.conf on Arch Linux
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Create the `aur_builder` user
+      become: yes
+      ansible.builtin.user:
+        name: aur_builder
+        create_home: yes
+        group: wheel
+
+    - name: Allow the `aur_builder` user to run `sudo pacman` without a password
+      become: yes
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/11-install-aur_builder
+        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        create: yes
+        mode: 0644
+        validate: 'visudo -cf %s'
+
+    - name: Install timeshift
+      aur:
+        name: timeshift
+        use: makepkg
+        state: present
+      become: yes
+      become_user: aur_builder
+
+    - name: Install timeshift-autosnap
+      aur:
+        name: timeshift-autosnap
+        use: makepkg
+        state: present
+      become: yes
+      become_user: aur_builder
+        
+    - name: Install grub-btrfs
+      pacman:
+        name: grub-btrfs
+        state: present
+      become: yes
+
+    - name: Install duf
+      pacman:
+        name: duf
+        state: present
+      become: yes
+
+    - name: Install duf
+      pacman:
+        name: inotify-tools
+        state: present
+      become: yes
