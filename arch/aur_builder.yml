@@ -15,12 +15,10 @@
     validate: 'visudo -cf %s'
 
 - name: Install timeshift
-  aur:
+  pacman:
     name: timeshift
-    use: makepkg
     state: present
   become: yes
-  become_user: aur_builder
 
 - name: Install timeshift-autosnap
   aur:
