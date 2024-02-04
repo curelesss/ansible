@@ -14,3 +14,4 @@
     - include_tasks: arch/fdong.group.yml
     - include_tasks: arch/pacman.conf.yml
     - include_tasks: arch/aur_builder.yml
+    - include_tasks: arch/grub-btrfsd.yml

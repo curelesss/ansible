@@ -1,0 +1,16 @@
+- name: Replace "/.snapshots/" with "--timeshift-auto" in grub-btrfsd.service
+  become: yes
+  replace:
+    path: /lib/systemd/system/grub-btrfsd.service
+    regexp: '/\.snapshots'
+    replace: '--timeshift-auto'
+
+- name: Start grub-btrfsd service
+  systemd:
+    name: grub-btrfsd
+    state: started
+
+- name: Enable grub-btrfsd service
+  systemd:
+    name: grub-btrfsd
+    enabled: yes
