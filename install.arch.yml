@@ -9,9 +9,9 @@
       command: pacman -Sy
 
   tasks:
-    - include_tasks: arch/locale.gen.yml
-    - include_tasks: arch/note-fonts.yml
-    - include_tasks: arch/fdong.group.yml
-    - include_tasks: arch/pacman.conf.yml
-    - include_tasks: arch/aur_builder.yml
-    - include_tasks: arch/grub-btrfsd.yml
+    - import_tasks: arch/locale.gen.yml
+    - import_tasks: arch/note-fonts.yml
+    - import_tasks: arch/fdong.group.yml
+    - import_tasks: arch/pacman.conf.yml
+    - import_tasks: arch/aur_builder.yml
+    - import_tasks: arch/grub-btrfsd.yml
