@@ -1,5 +1,5 @@
 [org/gnome/control-center]
-last-panel='network'
+last-panel='mouse'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -26,6 +26,26 @@ sources=[('xkb', 'us')]
 
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
+font-antialiasing='grayscale'
+font-hinting='slight'
+
+[org/gnome/desktop/notifications]
+application-children=['floorp', 'gnome-power-panel']
+
+[org/gnome/desktop/notifications/application/floorp]
+application-id='floorp.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/peripherals/mouse]
+accel-profile='flat'
+natural-scroll=true
+
+[org/gnome/desktop/peripherals/touchpad]
+natural-scroll=false
+tap-to-click=true
+two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/wm/keybindings]
 activate-window-menu=@as []
@@ -41,6 +61,9 @@ welcome-dialog-last-shown-version='45.3'
 
 [org/gnome/shell/world-clocks]
 locations=@av []
+
+[org/gnome/tweaks]
+show-extensions-notice=false
 
 [org/gtk/gtk4/settings/file-chooser]
 show-hidden=false
