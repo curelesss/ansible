@@ -16,4 +16,28 @@
   tags:
     - pacman.conf
 
+- name: Update pacman.conf - VerbosePkgLists
+  become: yes
+  replace:
+    path: /etc/pacman.conf
+    regexp: '^#VerbosePkgLists'
+    replace: 'VerbosePkgLists'
+  tags:
+    - pacman.conf
 
+- name: Update pacman.conf - ILoveCandy
+  lineinfile:
+    path: /etc/pacman.conf
+    line: "ILoveCandy"
+    insertafter: EOF
+    state: present
+  tags:
+    - pacman.conf
+
+- name: Update pamcam.conf - [multilib]
+  replace:
+    path: /etc/pacman.conf
+    regexp: "^#\\[multilib\\]\\n#Include = /etc/pacman.d/mirrorlist"
+    replace: "[multilib]\nInclude = /etc/pacman.d/mirrorlist"
+  tags:
+    - pacman.conf
