@@ -1,0 +1,14 @@
+- name: Ensure .vpn directory exists.
+  file:
+    dest: "{{ dest_key_vpn | dirname }}"
+    mode: 0700
+    state: directory
+  tags:
+    - vpn
+- name: Install vpn key 安装秘钥
+  copy:
+    src: "{{ source_key_vpn }}"
+    dest: "{{ dest_key_vpn }}"
+    mode: 0600
+  tags:
+    - vpn

@@ -1,0 +1,9 @@
+- name: Install networkmanager-openvpn package
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Install networkmanager-openvpn package
+      pacman:
+        name: networkmanager-openvpn
+        state: present

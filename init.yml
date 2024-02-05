@@ -3,7 +3,10 @@
   vars:
     source_key: "ssh/id_rsa"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    source_key_vpn: "vpn/my.ovpn"
+    dest_key_vpn: "{{ lookup('env', 'HOME') }}/.vpn/my.ovpn"
 
   tasks:
-    - include_tasks: tasks/git.yml
-    - include_tasks: tasks/ssh.yml
+    - import_tasks: tasks/git.yml
+    - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/openvpn.yml
