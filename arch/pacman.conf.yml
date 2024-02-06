@@ -29,10 +29,10 @@
   lineinfile:
     path: /etc/pacman.conf
     line: "ILoveCandy"
-    insertafter: EOF
+    insertafter: "# Misc options"
     state: present
   tags:
-    - pacman.conf
+    - pacman.conf1
 
 - name: Update pamcam.conf - [multilib]
   replace:
