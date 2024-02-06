@@ -66,3 +66,19 @@
     - browser
     - browser.extension
 
+- name: Install gnome-shell-extension-pop-shell
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - gnome-shell-extension-pop-shell 
+    state: present
+  become: yes
+  become_user: aur_builder
+  tags:
+    - pop
+
+- name: Install dconf-editor
+  pacman:
+    name: dconf-editor
+    state: present
+  become: yes

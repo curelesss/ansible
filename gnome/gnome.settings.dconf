@@ -1,9 +1,12 @@
+[ca/desrt/dconf-editor]
+show-warning=false
+
 [org/gnome/Console]
-last-window-size=(976, 759)
+last-window-size=(948, 1032)
 
 [org/gnome/control-center]
-last-panel='network'
-window-state=(980, 640, false)
+last-panel='keyboard'
+window-state=(948, 512, false)
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus']
@@ -29,12 +32,17 @@ sources=[('xkb', 'us')]
 xkb-options=['terminate:ctrl_alt_bksp']
 
 [org/gnome/desktop/interface]
+clock-show-weekday=false
 color-scheme='prefer-dark'
 font-antialiasing='grayscale'
 font-hinting='slight'
+show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['floorp', 'gnome-power-panel', 'org-gnome-console']
+application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor']
+
+[org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
+application-id='ca.desrt.dconf-editor.desktop'
 
 [org/gnome/desktop/notifications/application/floorp]
 application-id='floorp.desktop'
@@ -54,17 +62,44 @@ natural-scroll=false
 tap-to-click=true
 two-finger-scrolling-enabled=true
 
+[org/gnome/desktop/privacy]
+old-files-age=uint32 30
+recent-files-max-age=-1
+
 [org/gnome/desktop/search-providers]
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
+[org/gnome/desktop/session]
+idle-delay=uint32 300
+
 [org/gnome/desktop/wm/keybindings]
 activate-window-menu=@as []
+switch-to-workspace-1=['<Alt>1']
+switch-to-workspace-2=['<Alt>2']
+switch-to-workspace-3=['<Alt>3']
+switch-to-workspace-4=['<Alt>4']
+switch-to-workspace-5=['<Alt>5']
+switch-to-workspace-6=['<Alt>6']
+switch-to-workspace-7=['<Alt>7']
+switch-to-workspace-8=['<Alt>8']
+
+[org/gnome/desktop/wm/preferences]
+num-workspaces=6
 
 [org/gnome/evolution-data-server]
 migrated=true
 
+[org/gnome/mutter]
+dynamic-workspaces=false
+edge-tiling=false
+
 [org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
 migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
 
 [org/gnome/nm-applet/eap/e95025ed-85df-4af1-b77b-cf1e4d720058]
 ignore-ca-cert=false
@@ -74,10 +109,20 @@ ignore-phase2-ca-cert=false
 last-folder-path='/home/fdong/.vpn'
 
 [org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 search=['<Alt>space']
 
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Alt>p'
+command='dmenu_run'
+name='dmenu'
+
 [org/gnome/shell]
+enabled-extensions=['pop-shell@system76.com']
 welcome-dialog-last-shown-version='45.3'
+
+[org/gnome/shell/extensions/pop-shell]
+tile-by-default=true
 
 [org/gnome/shell/world-clocks]
 locations=@av []
