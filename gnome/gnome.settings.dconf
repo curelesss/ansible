@@ -1,5 +1,8 @@
+[org/gnome/Console]
+last-window-size=(976, 759)
+
 [org/gnome/control-center]
-last-panel='mouse'
+last-panel='network'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -23,6 +26,7 @@ translate=true
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us')]
+xkb-options=['terminate:ctrl_alt_bksp']
 
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
@@ -30,13 +34,16 @@ font-antialiasing='grayscale'
 font-hinting='slight'
 
 [org/gnome/desktop/notifications]
-application-children=['floorp', 'gnome-power-panel']
+application-children=['floorp', 'gnome-power-panel', 'org-gnome-console']
 
 [org/gnome/desktop/notifications/application/floorp]
 application-id='floorp.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-console]
+application-id='org.gnome.Console.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
@@ -47,11 +54,24 @@ natural-scroll=false
 tap-to-click=true
 two-finger-scrolling-enabled=true
 
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
 [org/gnome/desktop/wm/keybindings]
 activate-window-menu=@as []
 
+[org/gnome/evolution-data-server]
+migrated=true
+
 [org/gnome/nautilus/preferences]
 migrated-gtk-settings=true
+
+[org/gnome/nm-applet/eap/e95025ed-85df-4af1-b77b-cf1e4d720058]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/portal/filechooser/org.gnome.Settings]
+last-folder-path='/home/fdong/.vpn'
 
 [org/gnome/settings-daemon/plugins/media-keys]
 search=['<Alt>space']
@@ -62,9 +82,23 @@ welcome-dialog-last-shown-version='45.3'
 [org/gnome/shell/world-clocks]
 locations=@av []
 
+[org/gnome/software]
+check-timestamp=int64 1707196677
+first-run=false
+
 [org/gnome/tweaks]
 show-extensions-notice=false
 
 [org/gtk/gtk4/settings/file-chooser]
-show-hidden=false
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=140
+sort-column='name'
 sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+view-type='list'
+window-size=(859, 366)

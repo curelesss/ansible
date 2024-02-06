@@ -1,0 +1,5 @@
+- name: Arch Software Install Playbook
+  hosts: localhost
+
+  tasks:
+    - import_tasks: arch/yay.yml
