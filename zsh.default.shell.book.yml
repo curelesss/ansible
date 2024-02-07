@@ -1,0 +1,52 @@
+- name: ZSH Book
+  hosts: localhost
+
+  vars_prompt:
+    - name: "my_password"
+      prompt: "Enter sudo password for setting zsh as default shell"
+      private: yes
+
+  tasks:
+    - name: 安装 ZSH
+      pacman:
+        name: zsh
+        state: present
+      tags:
+        - zsh
+
+    - name: 安装 python-pexpect
+      pacman:
+        name: python-pexpect
+        state: present
+      tags:
+        - zsh
+
+    - name: 设置 ZSH 为 默认 SHELL
+      expect:
+        command: "chsh -s /usr/bin/zsh"
+        responses:
+          (?i)password: "{{ my_password }}"
+      tags:
+        - zsh
+
+    - name: 确认是否已安装 Oh-My-Zsh
+      stat:
+        path: ~/.oh-my-zsh
+      register: oh_my_stats
+      tags:
+        - zsh
+
+    - name: 安装 Oh-My-Zsh
+      shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh > ~/.oh-my-installer && chmod +x ~/.oh-my-installer && ~/.oh-my-installer
+      when: oh_my_stats.stat.exists == False
+      become_user: fdong
+      tags:
+        - zsh
+
+    - name: 安装 zsh-autosuggestions
+      ansible.builtin.git:
+        repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+        dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+      tags:
+        - zsh
+

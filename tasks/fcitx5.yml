@@ -63,3 +63,10 @@
   tags:
     - fcitx5
 
+- name: Synchronize files
+  synchronize:
+    src: ~/ansible/clover.pinyin/
+    dest: ~/.local/share/fcitx5/rime/
+    recursive: yes
+  tags:
+    - fcitx5

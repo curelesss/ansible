@@ -11,3 +11,4 @@
     - import_tasks: tasks/ssh.yml
     - import_tasks: tasks/openvpn.yml
     - import_tasks: tasks/fonts.yml
+    - import_tasks: tasks/fcitx5.yml
