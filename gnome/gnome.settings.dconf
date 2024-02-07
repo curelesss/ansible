@@ -1,12 +1,17 @@
 [ca/desrt/dconf-editor]
+saved-pathbar-path='/org/gnome/desktop/wm/keybindings/switch-to-workspace-8'
+saved-view='/org/gnome/desktop/wm/keybindings/'
 show-warning=false
+window-height=985
+window-is-maximized=false
+window-width=1904
 
 [org/gnome/Console]
 last-window-size=(948, 1032)
 
 [org/gnome/control-center]
-last-panel='keyboard'
-window-state=(948, 512, false)
+last-panel='multitasking'
+window-state=(1904, 1032, false)
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus']
@@ -28,6 +33,7 @@ name='suse-yast.directory'
 translate=true
 
 [org/gnome/desktop/input-sources]
+mru-sources=[('xkb', 'us')]
 sources=[('xkb', 'us')]
 xkb-options=['terminate:ctrl_alt_bksp']
 
@@ -39,7 +45,7 @@ font-hinting='slight'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor']
+application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor', 'org-gnome-settings', 'org-gnome-characters']
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
@@ -50,8 +56,14 @@ application-id='floorp.desktop'
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-characters]
+application-id='org.gnome.Characters.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-console]
 application-id='org.gnome.Console.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-settings]
+application-id='org.gnome.Settings.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
@@ -74,6 +86,15 @@ idle-delay=uint32 300
 
 [org/gnome/desktop/wm/keybindings]
 activate-window-menu=@as []
+close=['<Alt>c']
+move-to-workspace-1=['<Alt><Shift>1']
+move-to-workspace-2=['<Alt><Shift>2']
+move-to-workspace-3=['<Alt><Shift>3']
+move-to-workspace-4=['<Alt><Shift>4']
+move-to-workspace-5=['<Alt><Shift>5']
+move-to-workspace-6=['<Alt><Shift>6']
+move-to-workspace-7=['<Alt><Shift>7']
+move-to-workspace-8=['<Alt><Shift>8']
 switch-to-workspace-1=['<Alt>1']
 switch-to-workspace-2=['<Alt>2']
 switch-to-workspace-3=['<Alt>3']
@@ -84,10 +105,21 @@ switch-to-workspace-7=['<Alt>7']
 switch-to-workspace-8=['<Alt>8']
 
 [org/gnome/desktop/wm/preferences]
-num-workspaces=6
+num-workspaces=8
 
 [org/gnome/evolution-data-server]
 migrated=true
+
+[org/gnome/gnome-system-monitor]
+maximized=false
+network-total-in-bits=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(948, 1032, 964, 40)
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
 
 [org/gnome/mutter]
 dynamic-workspaces=false
@@ -109,7 +141,7 @@ ignore-phase2-ca-cert=false
 last-folder-path='/home/fdong/.vpn'
 
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 search=['<Alt>space']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
@@ -117,19 +149,52 @@ binding='<Alt>p'
 command='dmenu_run'
 name='dmenu'
 
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Alt>Return'
+command='kgx'
+name='terminal'
+
 [org/gnome/shell]
-enabled-extensions=['pop-shell@system76.com']
+disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['pop-shell@system76.com', 'blur-my-shell@aunetx', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'space-bar@luchrioh', 'Vitals@CoreCoding.com']
 welcome-dialog-last-shown-version='45.3'
 
 [org/gnome/shell/extensions/pop-shell]
+focus-down=['<Alt>j']
+focus-left=['<Alt>h']
+focus-right=['<Alt>l']
+focus-up=['<Alt>k']
 tile-by-default=true
+
+[org/gnome/shell/extensions/space-bar/appearance]
+active-workspace-border-radius=8
+empty-workspace-border-radius=8
+inactive-workspace-border-radius=8
+
+[org/gnome/shell/extensions/space-bar/behavior]
+always-show-numbers=true
+indicator-style='workspaces-bar'
+position='left'
+toggle-overview=true
+
+[org/gnome/shell/extensions/vitals]
+fixed-widths=false
+hide-icons=false
+hot-sensors=['_memory_usage_', '__temperature_avg__', '_processor_usage_']
+position-in-panel=2
+show-battery=false
+show-network=true
+show-temperature=true
+show-voltage=true
+use-higher-precision=false
 
 [org/gnome/shell/world-clocks]
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1707196677
+check-timestamp=int64 1707274397
 first-run=false
+flatpak-purge-timestamp=int64 1707234558
 
 [org/gnome/tweaks]
 show-extensions-notice=false

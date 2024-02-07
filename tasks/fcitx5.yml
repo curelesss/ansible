@@ -1,0 +1,65 @@
+- name: Install fcitx5
+  pacman:
+    name: fcitx5 
+    state: present
+  become: yes
+  tags:
+    - fcitx5
+
+- name: Install fcitx5-im
+  pacman:
+    name: fcitx5-im
+    state: present
+  become: yes
+  tags:
+    - fcitx5
+      
+- name: Update /etc/environment - GTK_IM_MODULE=fcitx
+  lineinfile:
+    path: /etc/environment
+    line: "GTK_IM_MODULE=fcitx"
+    insertafter: EOF
+    state: present
+  become: yes
+  tags:
+    - fcitx5
+
+- name: Update /etc/environment - QT_IM_MODULE=fcitx
+  lineinfile:
+    path: /etc/environment
+    line: "QT_IM_MODULE=fcitx"
+    insertafter: "GTK_IM_MODULE=fcitx" 
+    state: present
+  become: yes
+  tags:
+    - fcitx5
+
+- name: Update /etc/environment - XMODIFIERS=@im=fcitx
+  lineinfile:
+    path: /etc/environment
+    line: "XMODIFIERS=@im=fcitx"
+    insertafter: "QT_IM_MODULE=fcitx" 
+    state: present
+  become: yes
+  tags:
+    - fcitx5
+      
+- name: Install fcitx5-rime
+  pacman:
+    name: fcitx5-rime
+    state: present
+  become: yes
+  tags:
+    - fcitx5
+
+- name: Install rime-cloverpinyin
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - rime-cloverpinyin
+    state: present
+  become: yes
+  become_user: aur_builder
+  tags:
+    - fcitx5
+

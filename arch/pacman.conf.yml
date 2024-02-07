@@ -32,7 +32,7 @@
     insertafter: "# Misc options"
     state: present
   tags:
-    - pacman.conf1
+    - pacman.conf
 
 - name: Update pamcam.conf - [multilib]
   replace:

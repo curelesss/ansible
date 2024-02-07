@@ -1,0 +1,7 @@
+- name: Install Sauce Code pro
+  pacman:
+    name: ttf-sourcecodepro-nerd
+    state: present
+  become: yes
+  tags:
+    - font

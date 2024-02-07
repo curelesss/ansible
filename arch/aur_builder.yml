@@ -63,8 +63,7 @@
     state: present
   become: yes
   tags:
-    - browser
-    - browser.extension
+    - gnome
 
 - name: Install gnome-shell-extension-pop-shell
   kewlfft.aur.aur:
@@ -75,10 +74,61 @@
   become: yes
   become_user: aur_builder
   tags:
-    - pop
+    - gnome
 
 - name: Install dconf-editor
   pacman:
     name: dconf-editor
     state: present
   become: yes
+  tags:
+    - gnome
+
+- name: Install neovim
+  pacman:
+    name: neovim
+    state: present
+  become: yes
+  tags:
+    - nvim
+
+- name: Install gnome-shell-extension-blur-my-shell 
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - gnome-shell-extension-blur-my-shell 
+    state: present
+  become: yes
+  become_user: aur_builder
+  tags:
+    - gnome
+
+- name: Install gnome-shell-extensions
+  pacman:
+    name: gnome-shell-extensions
+    state: present
+  become: yes
+  tags:
+    - gnome
+
+- name: Install gnome-shell-extension-space-bar-git
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - gnome-shell-extension-space-bar-git
+    state: present
+  become: yes
+  become_user: aur_builder
+  tags:
+    - gnome
+
+- name: Install gnome-shell-extension-vitals
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - gnome-shell-extension-vitals
+    state: present
+  become: yes
+  become_user: aur_builder
+  tags:
+    - gnome
