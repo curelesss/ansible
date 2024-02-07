@@ -90,7 +90,15 @@
     state: present
   become: yes
   tags:
-    - nvim
+    - basic
+
+- name: Install neofetch
+  pacman:
+    name: neofetch
+    state: present
+  become: yes
+  tags:
+    - basic
 
 - name: Install gnome-shell-extension-blur-my-shell 
   kewlfft.aur.aur:
@@ -127,6 +135,17 @@
     use: yay
     name:
       - gnome-shell-extension-vitals
+    state: present
+  become: yes
+  become_user: aur_builder
+  tags:
+    - gnome
+
+- name: Install gnome-shell-extension-top-bar-organizer
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - gnome-shell-extension-top-bar-organizer
     state: present
   become: yes
   become_user: aur_builder

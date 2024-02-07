@@ -1,0 +1,4 @@
+patch:
+  "menu/page_size": 10 # 候选个数
+  schema_list:
+    - schema: clover # 使用 四叶草 拼音
