@@ -1,6 +1,6 @@
 [ca/desrt/dconf-editor]
-saved-pathbar-path='/org/gnome/desktop/wm/keybindings/move-to-workspace-8'
-saved-view='/org/gnome/desktop/wm/keybindings/move-to-workspace-8'
+saved-pathbar-path='/org/gnome/shell/extensions/pop-shell/focus-up'
+saved-view='/org/gnome/shell/extensions/pop-shell/focus-up'
 show-warning=false
 window-height=985
 window-is-maximized=false
@@ -10,7 +10,7 @@ window-width=948
 last-window-size=(948, 1032)
 
 [org/gnome/control-center]
-last-panel='multitasking'
+last-panel='display'
 window-state=(1904, 1032, false)
 
 [org/gnome/desktop/app-folders]
@@ -32,6 +32,10 @@ categories=['X-SuSE-YaST']
 name='suse-yast.directory'
 translate=true
 
+[org/gnome/desktop/background]
+primary-color='#3071AE'
+secondary-color='#000000'
+
 [org/gnome/desktop/input-sources]
 mru-sources=[('xkb', 'us')]
 sources=[('xkb', 'us')]
@@ -39,19 +43,22 @@ xkb-options=['terminate:ctrl_alt_bksp']
 
 [org/gnome/desktop/interface]
 clock-show-weekday=false
-color-scheme='prefer-dark'
+color-scheme='default'
 font-antialiasing='grayscale'
 font-hinting='slight'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor', 'org-gnome-settings', 'org-gnome-characters']
+application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor', 'org-gnome-settings', 'org-gnome-characters', 'gnome-network-panel']
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
 
 [org/gnome/desktop/notifications/application/floorp]
 application-id='floorp.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
@@ -67,7 +74,7 @@ application-id='org.gnome.Settings.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
-natural-scroll=true
+natural-scroll=false
 
 [org/gnome/desktop/peripherals/touchpad]
 natural-scroll=false
@@ -77,6 +84,13 @@ two-finger-scrolling-enabled=true
 [org/gnome/desktop/privacy]
 old-files-age=uint32 30
 recent-files-max-age=-1
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/gnome/adwaita-l.jpg'
+primary-color='#3071AE'
+secondary-color='#000000'
 
 [org/gnome/desktop/search-providers]
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
@@ -151,31 +165,45 @@ name='dmenu'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Alt>Return'
-command='kgx'
-name='terminal'
+command='alacritty'
+name='alacritty'
 
 [org/gnome/shell]
 disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['pop-shell@system76.com', 'blur-my-shell@aunetx', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'space-bar@luchrioh', 'Vitals@CoreCoding.com']
+enabled-extensions=['pop-shell@system76.com', 'blur-my-shell@aunetx', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'space-bar@luchrioh', 'Vitals@CoreCoding.com', 'top-bar-organizer@julian.gse.jsts.xyz']
 welcome-dialog-last-shown-version='45.3'
 
 [org/gnome/shell/extensions/pop-shell]
-focus-down=['<Alt>j']
-focus-left=['<Alt>h']
-focus-right=['<Alt>l']
-focus-up=['<Alt>k']
+active-hint=true
+active-hint-border-radius=uint32 6
+focus-down=['<Alt>j', '<Alt>down']
+focus-left=['<Alt>h', '<Alt>left']
+focus-right=['<Alt>l', '<Alt>right']
+focus-up=['<Alt>k', '<Alt>up']
+gap-inner=uint32 2
+gap-outer=uint32 2
+hint-color-rgba='rgb(247,167,20)'
+show-title=true
 tile-by-default=true
 
 [org/gnome/shell/extensions/space-bar/appearance]
 active-workspace-border-radius=8
 empty-workspace-border-radius=8
 inactive-workspace-border-radius=8
+workspace-margin=4
+workspaces-bar-padding=12
 
 [org/gnome/shell/extensions/space-bar/behavior]
 always-show-numbers=true
 indicator-style='workspaces-bar'
-position='left'
+position='center'
+scroll-wheel-wrap-around=false
 toggle-overview=true
+
+[org/gnome/shell/extensions/top-bar-organizer]
+center-box-order=['keyboard', 'Space Bar']
+left-box-order=['pop-shell', 'vitalsMenu', 'activities']
+right-box-order=['drive-menu', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'quickSettings', 'dateMenu']
 
 [org/gnome/shell/extensions/vitals]
 fixed-widths=false
@@ -192,7 +220,7 @@ use-higher-precision=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1707274397
+check-timestamp=int64 1707374769
 first-run=false
 flatpak-purge-timestamp=int64 1707234558
 
@@ -212,3 +240,7 @@ sort-order='ascending'
 type-format='category'
 view-type='list'
 window-size=(859, 366)
+
+[org/gtk/settings/color-chooser]
+custom-colors=[(0.97000000000000008, 0.6564540540540541, 0.077599999999999975, 1.0), (0.87058823529411766, 0.14117647058823529, 0.9137254901960784, 1.0), (0.87153393393393375, 0.14004444444444444, 0.91333333333333344, 1.0), (0.5725490196078431, 0.83921568627450982, 0.30980392156862746, 1.0), (0.57400000000000007, 0.84000000000000008, 0.30800000000000005, 1.0), (0.4823529411764706, 0.50196078431372548, 0.46274509803921571, 1.0), (0.48155802861685215, 0.50196078431372548, 0.46274509803921571, 1.0), (0.50196078431372548, 0.4823529411764706, 0.46274509803921571, 1.0)]
+selected-color=(true, 0.97000000000000008, 0.6564540540540541, 0.077599999999999975, 1.0)

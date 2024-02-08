@@ -151,3 +151,14 @@
   become_user: aur_builder
   tags:
     - gnome
+
+- name: Install gnome-shell-extension-kimpanel-git
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - gnome-shell-extension-kimpanel-git
+    state: present
+  become: yes
+  become_user: aur_builder
+  tags:
+    - gnome
