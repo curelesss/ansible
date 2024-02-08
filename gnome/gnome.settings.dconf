@@ -10,8 +10,8 @@ window-width=948
 last-window-size=(948, 1032)
 
 [org/gnome/control-center]
-last-panel='display'
-window-state=(1904, 1032, false)
+last-panel='multitasking'
+window-state=(1584, 852, false)
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus']
@@ -43,7 +43,7 @@ xkb-options=['terminate:ctrl_alt_bksp']
 
 [org/gnome/desktop/interface]
 clock-show-weekday=false
-color-scheme='default'
+color-scheme='prefer-dark'
 font-antialiasing='grayscale'
 font-hinting='slight'
 show-battery-percentage=true
@@ -109,6 +109,7 @@ move-to-workspace-5=['<Alt><Shift>5']
 move-to-workspace-6=['<Alt><Shift>6']
 move-to-workspace-7=['<Alt><Shift>7']
 move-to-workspace-8=['<Alt><Shift>8']
+move-to-workspace-9=['<Alt><Shift>9']
 switch-to-workspace-1=['<Alt>1']
 switch-to-workspace-2=['<Alt>2']
 switch-to-workspace-3=['<Alt>3']
@@ -117,9 +118,10 @@ switch-to-workspace-5=['<Alt>5']
 switch-to-workspace-6=['<Alt>6']
 switch-to-workspace-7=['<Alt>7']
 switch-to-workspace-8=['<Alt>8']
+switch-to-workspace-9=['<Alt>9']
 
 [org/gnome/desktop/wm/preferences]
-num-workspaces=8
+num-workspaces=9
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -170,7 +172,7 @@ name='alacritty'
 
 [org/gnome/shell]
 disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['pop-shell@system76.com', 'blur-my-shell@aunetx', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'space-bar@luchrioh', 'Vitals@CoreCoding.com', 'top-bar-organizer@julian.gse.jsts.xyz']
+enabled-extensions=['pop-shell@system76.com', 'blur-my-shell@aunetx', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'space-bar@luchrioh', 'Vitals@CoreCoding.com', 'top-bar-organizer@julian.gse.jsts.xyz', 'kimpanel@kde.org']
 welcome-dialog-last-shown-version='45.3'
 
 [org/gnome/shell/extensions/pop-shell]
@@ -203,7 +205,7 @@ toggle-overview=true
 [org/gnome/shell/extensions/top-bar-organizer]
 center-box-order=['keyboard', 'Space Bar']
 left-box-order=['pop-shell', 'vitalsMenu', 'activities']
-right-box-order=['drive-menu', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'quickSettings', 'dateMenu']
+right-box-order=['kimpanel', 'drive-menu', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'quickSettings', 'dateMenu']
 
 [org/gnome/shell/extensions/vitals]
 fixed-widths=false
