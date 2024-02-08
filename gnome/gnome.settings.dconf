@@ -10,8 +10,8 @@ window-width=948
 last-window-size=(948, 1032)
 
 [org/gnome/control-center]
-last-panel='multitasking'
-window-state=(1584, 852, false)
+last-panel='keyboard'
+window-state=(948, 512, false)
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus']
@@ -167,11 +167,11 @@ name='dmenu'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Alt>Return'
-command='alacritty'
-name='alacritty'
+command='st'
+name='st'
 
 [org/gnome/shell]
-disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com']
+disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['pop-shell@system76.com', 'blur-my-shell@aunetx', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'space-bar@luchrioh', 'Vitals@CoreCoding.com', 'top-bar-organizer@julian.gse.jsts.xyz', 'kimpanel@kde.org']
 welcome-dialog-last-shown-version='45.3'
 
@@ -205,7 +205,7 @@ toggle-overview=true
 [org/gnome/shell/extensions/top-bar-organizer]
 center-box-order=['keyboard', 'Space Bar']
 left-box-order=['pop-shell', 'vitalsMenu', 'activities']
-right-box-order=['kimpanel', 'drive-menu', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'quickSettings', 'dateMenu']
+right-box-order=['workspace-indicator', 'kimpanel', 'drive-menu', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'quickSettings', 'dateMenu']
 
 [org/gnome/shell/extensions/vitals]
 fixed-widths=false

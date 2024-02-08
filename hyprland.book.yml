@@ -1,0 +1,30 @@
+- name: Hyprland Book
+  hosts: localhost
+
+  tasks:
+    - name: 安装 Hyprland
+      kewlfft.aur.aur:
+        use: yay
+        name:
+          - hyprland
+        state: present
+      become: yes
+      become_user: aur_builder
+      tags:
+        - hyprland
+
+    - name: 安装 Dolphin
+      pacman:
+        name: dolphin
+        state: present
+      become: yes
+      tags:
+        - hyprland
+
+    - name: 安装 Wofi
+      pacman:
+        name: wofi
+        state: present
+      become: yes
+      tags:
+        - hyprland
