@@ -1,17 +1,23 @@
 [ca/desrt/dconf-editor]
-saved-pathbar-path='/org/gnome/shell/extensions/pop-shell/focus-up'
-saved-view='/org/gnome/shell/extensions/pop-shell/focus-up'
+saved-pathbar-path='/org/gnome/shell/extensions/space-bar/shortcuts/activate-previous-key'
+saved-view='/org/gnome/shell/extensions/space-bar/shortcuts/activate-previous-key'
 show-warning=false
 window-height=985
 window-is-maximized=false
-window-width=948
+window-width=1904
 
 [org/gnome/Console]
-last-window-size=(948, 1032)
+custom-font='SauceCodePro Nerd Font Mono 11'
+font-scale=1.1000000000000001
+last-window-size=(1904, 1032)
+use-system-font=false
 
 [org/gnome/control-center]
-last-panel='keyboard'
-window-state=(948, 512, false)
+last-panel='universal-access'
+window-state=(1904, 1032, false)
+
+[org/gnome/desktop/a11y]
+always-show-universal-access-status=false
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus']
@@ -43,13 +49,14 @@ xkb-options=['terminate:ctrl_alt_bksp']
 
 [org/gnome/desktop/interface]
 clock-show-weekday=false
-color-scheme='prefer-dark'
+color-scheme='default'
+enable-animations=false
 font-antialiasing='grayscale'
 font-hinting='slight'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor', 'org-gnome-settings', 'org-gnome-characters', 'gnome-network-panel']
+application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor', 'org-gnome-settings', 'org-gnome-characters', 'gnome-network-panel', 'org-gnome-shell-extensions']
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
@@ -71,6 +78,9 @@ application-id='org.gnome.Console.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-settings]
 application-id='org.gnome.Settings.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-shell-extensions]
+application-id='org.gnome.Shell.Extensions.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
@@ -101,15 +111,7 @@ idle-delay=uint32 300
 [org/gnome/desktop/wm/keybindings]
 activate-window-menu=@as []
 close=['<Alt>c']
-move-to-workspace-1=['<Alt><Shift>1']
-move-to-workspace-2=['<Alt><Shift>2']
-move-to-workspace-3=['<Alt><Shift>3']
-move-to-workspace-4=['<Alt><Shift>4']
-move-to-workspace-5=['<Alt><Shift>5']
-move-to-workspace-6=['<Alt><Shift>6']
-move-to-workspace-7=['<Alt><Shift>7']
-move-to-workspace-8=['<Alt><Shift>8']
-move-to-workspace-9=['<Alt><Shift>9']
+switch-applications=['<Super>Tab']
 switch-to-workspace-1=['<Alt>1']
 switch-to-workspace-2=['<Alt>2']
 switch-to-workspace-3=['<Alt>3']
@@ -167,11 +169,11 @@ name='dmenu'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Alt>Return'
-command='st'
-name='st'
+command='kgx'
+name='kgx'
 
 [org/gnome/shell]
-disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
+disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'light-style@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['pop-shell@system76.com', 'blur-my-shell@aunetx', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'space-bar@luchrioh', 'Vitals@CoreCoding.com', 'top-bar-organizer@julian.gse.jsts.xyz', 'kimpanel@kde.org']
 welcome-dialog-last-shown-version='45.3'
 
@@ -189,9 +191,27 @@ show-title=true
 tile-by-default=true
 
 [org/gnome/shell/extensions/space-bar/appearance]
-active-workspace-border-radius=8
-empty-workspace-border-radius=8
-inactive-workspace-border-radius=8
+active-workspace-background-color='rgb(255,190,111)'
+active-workspace-border-color='rgba(0,0,0,0)'
+active-workspace-border-radius=6
+active-workspace-border-width=0
+active-workspace-font-size=11
+active-workspace-font-size-active=true
+active-workspace-font-size-user=11
+active-workspace-font-weight='700'
+active-workspace-padding-v=3
+active-workspace-text-color='rgb(0,0,0)'
+empty-workspace-border-radius=6
+empty-workspace-border-width=0
+empty-workspace-font-size=11
+empty-workspace-font-weight='700'
+empty-workspace-padding-v=3
+inactive-workspace-border-radius=6
+inactive-workspace-border-width=0
+inactive-workspace-font-size=11
+inactive-workspace-font-weight='700'
+inactive-workspace-padding-v=3
+inactive-workspace-text-color='rgb(255,190,111)'
 workspace-margin=4
 workspaces-bar-padding=12
 
@@ -202,9 +222,15 @@ position='center'
 scroll-wheel-wrap-around=false
 toggle-overview=true
 
+[org/gnome/shell/extensions/space-bar/shortcuts]
+activate-previous-key=['<Alt>Tab']
+enable-activate-workspace-shortcuts=false
+enable-move-to-workspace-shortcuts=false
+open-menu=['<Super>w']
+
 [org/gnome/shell/extensions/top-bar-organizer]
 center-box-order=['keyboard', 'Space Bar']
-left-box-order=['pop-shell', 'vitalsMenu', 'activities']
+left-box-order=['pop-shell', 'vitalsMenu', 'activities', 'apps-menu']
 right-box-order=['workspace-indicator', 'kimpanel', 'drive-menu', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'quickSettings', 'dateMenu']
 
 [org/gnome/shell/extensions/vitals]
@@ -222,12 +248,16 @@ use-higher-precision=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1707374769
+check-timestamp=int64 1707454132
 first-run=false
 flatpak-purge-timestamp=int64 1707234558
 
 [org/gnome/tweaks]
 show-extensions-notice=false
+
+[org/gtk/gtk4/settings/color-chooser]
+custom-colors=[(1.0, 1.0, 1.0, 0.30000001192092896), (0.0, 0.0, 0.0, 0.0)]
+selected-color=(true, 1.0, 0.7450980544090271, 0.43529412150382996, 1.0)
 
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'

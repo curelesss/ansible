@@ -28,3 +28,19 @@
       become: yes
       tags:
         - hyprland
+
+    - name: 安装 kitty
+      pacman:
+        name: kitty
+        state: present
+      become: yes
+      tags:
+        - hyprland
+
+    - name: 安装 waybar
+      pacman:
+        name: waybar
+        state: present
+      become: yes
+      tags:
+        - hyprland
