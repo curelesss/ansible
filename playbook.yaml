@@ -1,4 +1,4 @@
-- name: Hyprland Book
+ - name: Hyprland Book
   hosts: localhost
 
   tasks:
