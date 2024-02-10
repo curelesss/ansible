@@ -123,7 +123,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
-      - gnome-shell-extension-space-bar-git
+      - gnome-shell-extension-space-bar
     state: present
   become: yes
   become_user: aur_builder
@@ -152,13 +152,24 @@
   tags:
     - gnome
 
-- name: Install gnome-shell-extension-kimpanel-git
+- name: Install gnome-shell-extension-kimpanel
   kewlfft.aur.aur:
     use: yay
     name:
-      - gnome-shell-extension-kimpanel-git
+      - gnome-shell-extension-kimpanel
     state: present
   become: yes
   become_user: aur_builder
   tags:
     - gnome
+
+- name: Install vim-fcitx
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - vim-fcitx
+    state: present
+  become: yes
+  become_user: aur_builder
+  tags:
+    - neovim

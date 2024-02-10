@@ -9,11 +9,11 @@ window-width=1904
 [org/gnome/Console]
 custom-font='SauceCodePro Nerd Font Mono 11'
 font-scale=1.1000000000000001
-last-window-size=(1904, 1032)
+last-window-size=(948, 1032)
 use-system-font=false
 
 [org/gnome/control-center]
-last-panel='universal-access'
+last-panel='background'
 window-state=(1904, 1032, false)
 
 [org/gnome/desktop/a11y]
@@ -56,10 +56,13 @@ font-hinting='slight'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor', 'org-gnome-settings', 'org-gnome-characters', 'gnome-network-panel', 'org-gnome-shell-extensions']
+application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor', 'org-gnome-settings', 'org-gnome-characters', 'gnome-network-panel', 'org-gnome-shell-extensions', 'emacsclient']
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
+
+[org/gnome/desktop/notifications/application/emacsclient]
+application-id='emacsclient.desktop'
 
 [org/gnome/desktop/notifications/application/floorp]
 application-id='floorp.desktop'
@@ -111,6 +114,15 @@ idle-delay=uint32 300
 [org/gnome/desktop/wm/keybindings]
 activate-window-menu=@as []
 close=['<Alt>c']
+move-to-workspace-1=['<Alt><Shift>1']
+move-to-workspace-2=['<Alt><Shift>2']
+move-to-workspace-3=['<Alt><Shift>3']
+move-to-workspace-4=['<Alt><Shift>4']
+move-to-workspace-5=['<Alt><Shift>5']
+move-to-workspace-6=['<Alt><Shift>6']
+move-to-workspace-7=['<Alt><Shift>7']
+move-to-workspace-8=['<Alt><Shift>8']
+move-to-workspace-9=['<Alt><Shift>9']
 switch-applications=['<Super>Tab']
 switch-to-workspace-1=['<Alt>1']
 switch-to-workspace-2=['<Alt>2']
@@ -121,6 +133,7 @@ switch-to-workspace-6=['<Alt>6']
 switch-to-workspace-7=['<Alt>7']
 switch-to-workspace-8=['<Alt>8']
 switch-to-workspace-9=['<Alt>9']
+toggle-maximized=['<Alt>m']
 
 [org/gnome/desktop/wm/preferences]
 num-workspaces=9
@@ -149,7 +162,7 @@ migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
-initial-size=(890, 550)
+initial-size=(948, 1032)
 
 [org/gnome/nm-applet/eap/e95025ed-85df-4af1-b77b-cf1e4d720058]
 ignore-ca-cert=false
@@ -168,7 +181,7 @@ command='dmenu_run'
 name='dmenu'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
-binding='<Alt>Return'
+binding='<Alt>q'
 command='kgx'
 name='kgx'
 
@@ -187,7 +200,7 @@ focus-up=['<Alt>k', '<Alt>up']
 gap-inner=uint32 2
 gap-outer=uint32 2
 hint-color-rgba='rgb(247,167,20)'
-show-title=true
+show-title=false
 tile-by-default=true
 
 [org/gnome/shell/extensions/space-bar/appearance]
@@ -211,7 +224,7 @@ inactive-workspace-border-width=0
 inactive-workspace-font-size=11
 inactive-workspace-font-weight='700'
 inactive-workspace-padding-v=3
-inactive-workspace-text-color='rgb(255,190,111)'
+inactive-workspace-text-color='rgb(246,97,81)'
 workspace-margin=4
 workspaces-bar-padding=12
 
@@ -236,7 +249,7 @@ right-box-order=['workspace-indicator', 'kimpanel', 'drive-menu', 'screenRecordi
 [org/gnome/shell/extensions/vitals]
 fixed-widths=false
 hide-icons=false
-hot-sensors=['_memory_usage_', '__temperature_avg__', '_processor_usage_']
+hot-sensors=['_memory_usage_', '__temperature_avg__', '_processor_usage_', '_network_wifi_link quality_']
 position-in-panel=2
 show-battery=false
 show-network=true
@@ -248,16 +261,16 @@ use-higher-precision=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1707454132
+check-timestamp=int64 1707532384
 first-run=false
-flatpak-purge-timestamp=int64 1707234558
+flatpak-purge-timestamp=int64 1707547273
 
 [org/gnome/tweaks]
 show-extensions-notice=false
 
 [org/gtk/gtk4/settings/color-chooser]
 custom-colors=[(1.0, 1.0, 1.0, 0.30000001192092896), (0.0, 0.0, 0.0, 0.0)]
-selected-color=(true, 1.0, 0.7450980544090271, 0.43529412150382996, 1.0)
+selected-color=(true, 0.96470588445663452, 0.3803921639919281, 0.31764706969261169, 1.0)
 
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
@@ -276,3 +289,17 @@ window-size=(859, 366)
 [org/gtk/settings/color-chooser]
 custom-colors=[(0.97000000000000008, 0.6564540540540541, 0.077599999999999975, 1.0), (0.87058823529411766, 0.14117647058823529, 0.9137254901960784, 1.0), (0.87153393393393375, 0.14004444444444444, 0.91333333333333344, 1.0), (0.5725490196078431, 0.83921568627450982, 0.30980392156862746, 1.0), (0.57400000000000007, 0.84000000000000008, 0.30800000000000005, 1.0), (0.4823529411764706, 0.50196078431372548, 0.46274509803921571, 1.0), (0.48155802861685215, 0.50196078431372548, 0.46274509803921571, 1.0), (0.50196078431372548, 0.4823529411764706, 0.46274509803921571, 1.0)]
 selected-color=(true, 0.97000000000000008, 0.6564540540540541, 0.077599999999999975, 1.0)
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=157
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(344, 81)
+window-size=(1231, 902)
