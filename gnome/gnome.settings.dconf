@@ -1,16 +1,16 @@
 [ca/desrt/dconf-editor]
-saved-pathbar-path='/org/gnome/shell/extensions/space-bar/shortcuts/activate-previous-key'
-saved-view='/org/gnome/shell/extensions/space-bar/shortcuts/activate-previous-key'
+saved-pathbar-path='/org/gnome/shell/extensions/pop-shell/focus-left'
+saved-view='/org/gnome/shell/extensions/pop-shell/focus-left'
 show-warning=false
 window-height=985
 window-is-maximized=false
-window-width=1904
+window-width=948
 
 [org/gnome/Console]
 custom-font='SauceCodePro Nerd Font Mono 11'
 font-scale=1.1000000000000001
-last-window-size=(948, 1032)
-use-system-font=false
+last-window-size=(1904, 1032)
+use-system-font=true
 
 [org/gnome/control-center]
 last-panel='background'
@@ -53,10 +53,12 @@ color-scheme='default'
 enable-animations=false
 font-antialiasing='grayscale'
 font-hinting='slight'
+font-name='Cantarell 11'
+monospace-font-name='LXGW WenKai Mono 12'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor', 'org-gnome-settings', 'org-gnome-characters', 'gnome-network-panel', 'org-gnome-shell-extensions', 'emacsclient']
+application-children=['floorp', 'gnome-power-panel', 'org-gnome-console', 'ca-desrt-dconf-editor', 'org-gnome-settings', 'org-gnome-characters', 'gnome-network-panel', 'org-gnome-shell-extensions', 'emacsclient', 'org-gnome-tweaks']
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
@@ -84,6 +86,9 @@ application-id='org.gnome.Settings.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-shell-extensions]
 application-id='org.gnome.Shell.Extensions.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
@@ -194,7 +199,7 @@ welcome-dialog-last-shown-version='45.3'
 active-hint=true
 active-hint-border-radius=uint32 6
 focus-down=['<Alt>j', '<Alt>down']
-focus-left=['<Alt>h', '<Alt>left']
+focus-left=['<Alt>h']
 focus-right=['<Alt>l', '<Alt>right']
 focus-up=['<Alt>k', '<Alt>up']
 gap-inner=uint32 2
@@ -261,9 +266,9 @@ use-higher-precision=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1707532384
+check-timestamp=int64 1707621506
 first-run=false
-flatpak-purge-timestamp=int64 1707547273
+flatpak-purge-timestamp=int64 1707630056
 
 [org/gnome/tweaks]
 show-extensions-notice=false

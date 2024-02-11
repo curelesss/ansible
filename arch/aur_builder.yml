@@ -173,3 +173,19 @@
   become_user: aur_builder
   tags:
     - neovim
+
+- name: Install ripgrep
+  pacman:
+    name: ripgrep
+    state: present
+  become: yes
+  tags:
+    - telescope.nvim
+
+- name: Install fd
+  pacman:
+    name: fd
+    state: present
+  become: yes
+  tags:
+    - telescope.nvim
