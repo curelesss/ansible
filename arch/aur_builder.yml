@@ -189,3 +189,14 @@
   become: yes
   tags:
     - telescope.nvim
+
+- name: Install gnome-shell-extension-nightthemeswitcher
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - gnome-shell-extension-nightthemeswitcher
+    state: present
+  become: yes
+  become_user: aur_builder
+  tags:
+    - gnome
