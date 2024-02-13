@@ -1,6 +1,6 @@
 [ca/desrt/dconf-editor]
-saved-pathbar-path='/org/gnome/shell/extensions/pop-shell/focus-left'
-saved-view='/org/gnome/shell/extensions/pop-shell/focus-left'
+saved-pathbar-path='/org/gnome/desktop/wm/keybindings/switch-to-workspace-right'
+saved-view='/org/gnome/desktop/wm/keybindings/switch-to-workspace-right'
 show-warning=false
 window-height=985
 window-is-maximized=false
@@ -9,8 +9,8 @@ window-width=948
 [org/gnome/Console]
 custom-font='SauceCodePro Nerd Font Mono 11'
 font-scale=1.1000000000000001
-last-window-size=(1904, 1032)
-use-system-font=true
+last-window-size=(948, 512)
+use-system-font=false
 
 [org/gnome/control-center]
 last-panel='background'
@@ -49,12 +49,12 @@ xkb-options=['terminate:ctrl_alt_bksp']
 
 [org/gnome/desktop/interface]
 clock-show-weekday=false
-color-scheme='default'
+color-scheme='prefer-dark'
 enable-animations=false
 font-antialiasing='grayscale'
 font-hinting='slight'
 font-name='Cantarell 11'
-monospace-font-name='LXGW WenKai Mono 12'
+monospace-font-name='SauceCodePro Nerd Font Propo 11'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
@@ -138,6 +138,8 @@ switch-to-workspace-6=['<Alt>6']
 switch-to-workspace-7=['<Alt>7']
 switch-to-workspace-8=['<Alt>8']
 switch-to-workspace-9=['<Alt>9']
+switch-to-workspace-left=['<Alt><Ctrl>left']
+switch-to-workspace-right=['<Alt><Ctrl>right']
 toggle-maximized=['<Alt>m']
 
 [org/gnome/desktop/wm/preferences]
@@ -177,7 +179,7 @@ ignore-phase2-ca-cert=false
 last-folder-path='/home/fdong/.vpn'
 
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
 search=['<Alt>space']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
@@ -190,10 +192,19 @@ binding='<Alt>q'
 command='kgx'
 name='kgx'
 
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Alt>f'
+command='floorp'
+name='floorp'
+
 [org/gnome/shell]
 disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'light-style@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['pop-shell@system76.com', 'blur-my-shell@aunetx', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'space-bar@luchrioh', 'Vitals@CoreCoding.com', 'top-bar-organizer@julian.gse.jsts.xyz', 'kimpanel@kde.org']
+enabled-extensions=['pop-shell@system76.com', 'blur-my-shell@aunetx', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'space-bar@luchrioh', 'Vitals@CoreCoding.com', 'top-bar-organizer@julian.gse.jsts.xyz', 'kimpanel@kde.org', 'nightthemeswitcher@romainvigier.fr']
 welcome-dialog-last-shown-version='45.3'
+
+[org/gnome/shell/extensions/nightthemeswitcher/time]
+manual-schedule=true
+nightthemeswitcher-ondemand-keybinding=['<Shift><Super>t']
 
 [org/gnome/shell/extensions/pop-shell]
 active-hint=true
@@ -266,9 +277,9 @@ use-higher-precision=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1707621506
+check-timestamp=int64 1707791848
 first-run=false
-flatpak-purge-timestamp=int64 1707630056
+flatpak-purge-timestamp=int64 1707819319
 
 [org/gnome/tweaks]
 show-extensions-notice=false

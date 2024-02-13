@@ -172,7 +172,7 @@
   become: yes
   become_user: aur_builder
   tags:
-    - neovim
+    - basic
 
 - name: Install ripgrep
   pacman:
@@ -200,3 +200,20 @@
   become_user: aur_builder
   tags:
     - gnome
+
+- name: Install tldr
+  pacman:
+    name: tldr
+    state: present
+  become: yes
+  tags:
+    - basic
+
+- name: Install sxhkd
+  pacman:
+    name: sxhkd
+    state: present
+  become: yes
+  tags:
+    - basic
+
